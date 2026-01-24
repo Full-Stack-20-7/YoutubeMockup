@@ -58,6 +58,8 @@
     padding: 16px 0;
     cursor: pointer;
     border-radius: 10px;
+    text-decoration: none;
+    color: #0f0f0f;
 }
 
 .mini-menu-item:hover {
@@ -70,10 +72,13 @@
 
 .mini-menu-item svg {
     margin-bottom: 6px;
+    width: 24px;
+    height: 24px;
 }
 
-.mini-menu-item span {
+.mini-menu-item .title {
     font-size: 10px;
+    text-align: center;
 }
 
 /* 접힘 상태 클래스 */
@@ -99,9 +104,13 @@
     margin-right: 24px; 
 }
 
-.icon img {
+.icon img, .icon svg {
     width: 24px;
     height: 24px;
+}
+
+.icon svg path, .mini-menu-item svg path {
+    fill: #0f0f0f;
 }
 
 /* 섹션 타이틀 및 구분선 */

@@ -1,3 +1,41 @@
+// 사이드바 로드 및 토글 기능
+const appContainer = document.querySelector('.app-container');
+const sidebarContainer = document.getElementById('sidebar-container');
+const guideButton = document.getElementById('guide-button');
+
+// 토글 기능 바인딩
+guideButton.addEventListener('click', () => {
+    appContainer.classList.toggle('collapsed');
+});
+
+async function loadSidebar() {
+    try {
+        const response = await fetch('sidebar.html');
+        if (!response.ok) throw new Error('Network response was not ok');
+        const html = await response.text();
+        sidebarContainer.innerHTML = html;
+        
+        // 사이드바 아이템 클릭 이벤트 (활성화 표시)
+        const bindSidebarEvents = () => {
+            const sidebarItems = sidebarContainer.querySelectorAll('.menu-item, .mini-menu-item');
+            sidebarItems.forEach(item => {
+                item.addEventListener('click', () => {
+                    sidebarContainer.querySelectorAll('.menu-item.active, .mini-menu-item.active').forEach(activeItem => {
+                        activeItem.classList.remove('active');
+                    });
+                    item.classList.add('active');
+                });
+            });
+        };
+        bindSidebarEvents();
+    } catch (error) {
+        console.error('사이드바를 불러오는 데 실패했습니다:', error);
+        // fetch 실패 시(예: 로컬 파일 시스템 직접 실행)를 대비한 대체 로직이나 안내가 필요할 수 있습니다.
+    }
+}
+
+loadSidebar();
+
 // 필터 칩 클릭 이벤트 핸들러
 const chips = document.querySelectorAll('.chip');
 chips.forEach(chip => {
