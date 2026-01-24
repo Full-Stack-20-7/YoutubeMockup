@@ -1,0 +1,127 @@
+/* 사이드바 스타일 */
+.sidebar {
+    width: 240px;
+    height: calc(100vh - 56px);
+    position: fixed;
+    left: 0;
+    top: 56px;
+    background-color: #fff;
+    overflow-y: auto; 
+    z-index: 90;
+}
+
+.mini-sidebar {
+    display: none;
+    flex-direction: column;
+    width: 72px;
+    height: calc(100vh - 56px);
+    position: fixed;
+    left: 0;
+    top: 56px;
+    background-color: #fff;
+    padding: 4px;
+    z-index: 90;
+}
+
+/* 메뉴 아이템 공통 스타일 */
+.menu-group {
+    list-style: none;
+    padding: 12px;
+}
+
+.menu-item {
+    display: flex;
+    align-items: center;
+    padding: 0 12px;
+    height: 40px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 14px;
+    color: #0f0f0f;
+}
+
+.menu-item.active {
+    background-color: #f2f2f2;
+    font-weight: 500;
+}
+
+.menu-item:hover {
+    background-color: #f2f2f2;
+}
+
+/* 미니 사이드바 아이템 스타일 */
+.mini-menu-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 16px 0;
+    cursor: pointer;
+    border-radius: 10px;
+}
+
+.mini-menu-item:hover {
+    background-color: #f2f2f2;
+}
+
+.mini-menu-item.active svg path {
+    fill: #0f0f0f;
+}
+
+.mini-menu-item svg {
+    margin-bottom: 6px;
+}
+
+.mini-menu-item span {
+    font-size: 10px;
+}
+
+/* 접힘 상태 클래스 */
+.app-container.collapsed .sidebar {
+    display: none;
+}
+
+.app-container.collapsed .mini-sidebar {
+    display: flex;
+}
+
+.app-container.collapsed .content {
+    margin-left: 72px;
+}
+
+/* 아이콘 영역 (이미지가 들어갈 자리) */
+.icon {
+    width: 24px;     
+    height: 24px;     
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 24px; 
+}
+
+.icon img {
+    width: 24px;
+    height: 24px;
+}
+
+/* 섹션 타이틀 및 구분선 */
+.section-title {
+    padding: 10px 24px;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.divider {
+    height: 1px;
+    background-color: #e5e5e5;
+    margin: 8px 12px;
+}
+
+/* 푸터 정보 */
+.sidebar-footer {
+    padding: 16px 24px;
+    font-size: 12px;
+    color: #606060;
+    line-height: 1.8;
+}
+
