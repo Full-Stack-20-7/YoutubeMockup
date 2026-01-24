@@ -15,14 +15,13 @@
         </header>
 
         <div class="main-container">
-            <!-- 사이드바 (미니 가이드 크기 유지를 위한 빈 영역) -->
+            <!-- 사이드바 -->
             <aside class="sidebar">
-                <!-- 사이드바 콘텐츠는 팀원 담당 -->
             </aside>
 
-            <!-- Main Content (본문 영역) -->
+            <!-- 본문 영역 -->
             <main class="content">
-                <!-- Filter Chips -->
+                <!-- 필터 칩 -->
                 <nav class="filter-bar">
                     <div class="chips-container" id="chips">
                         <button class="chip active">전체</button>
@@ -35,63 +34,12 @@
                     </div>
                 </nav>
 
-                <!-- Video Grid -->
+                <!-- 비디오 그리드 -->
                 <section class="video-grid">
                     <!-- 추천 영상 영역 -->
-                    <div class="video-card">
-                        <div class="thumbnail">
-                            <img src="https://loremflickr.com/360/202/concert?lock=1" alt="추천 영상 01">
-                        </div>
-                        <div class="video-info">
-                            <img class="channel-avatar" src="https://loremflickr.com/36/36/person?lock=1" alt="Avatar">
-                            <div class="video-text">
-                                <h3 class="video-title">추천 영상 01</h3>
-                                <p class="channel-name">추천 채널 01</p>
-                                <p class="video-meta">조회수 1만회 • 1시간 전</p>
-                            </div>
-                            <button class="video-card-menu">
-                                <svg viewBox="0 0 24 24" width="24" height="24"><path d="M12 4a2 2 0 100 4 2 2 0 000-4Zm0 6a2 2 0 100 4 2 2 0 000-4Zm0 6a2 2 0 100 4 2 2 0 000-4Z"></path></svg>
-                            </button>
-                        </div>
-                    </div>
+                    <div id="recommended-videos" style="display: contents;"></div>
 
-                    <div class="video-card">
-                        <div class="thumbnail">
-                            <img src="https://loremflickr.com/360/202/concert?lock=2" alt="추천 영상 02">
-                            <span class="duration">6:34</span>
-                        </div>
-                        <div class="video-info">
-                            <img class="channel-avatar" src="https://loremflickr.com/36/36/person?lock=2" alt="Avatar">
-                            <div class="video-text">
-                                <h3 class="video-title">추천 영상 02</h3>
-                                <p class="channel-name">추천 채널 02</p>
-                                <p class="video-meta">조회수 2만회 • 2시간 전</p>
-                            </div>
-                            <button class="video-card-menu">
-                                <svg viewBox="0 0 24 24" width="24" height="24"><path d="M12 4a2 2 0 100 4 2 2 0 000-4Zm0 6a2 2 0 100 4 2 2 0 000-4Zm0 6a2 2 0 100 4 2 2 0 000-4Z"></path></svg>
-                            </button>
-                        </div>
-                    </div>
-
-                    <div class="video-card">
-                        <div class="thumbnail">
-                            <img src="https://loremflickr.com/360/202/music?lock=33" alt="추천 영상 03">
-                            <span class="duration">12:45</span>
-                        </div>
-                        <div class="video-info">
-                            <img class="channel-avatar" src="https://loremflickr.com/36/36/avatar?lock=33" alt="Avatar">
-                            <div class="video-text">
-                                <h3 class="video-title">추천 영상 03</h3>
-                                <p class="channel-name">추천 채널 03</p>
-                                <p class="video-meta">조회수 3만회 • 3시간 전</p>
-                            </div>
-                            <button class="video-card-menu">
-                                <svg viewBox="0 0 24 24" width="24" height="24"><path d="M12 4a2 2 0 100 4 2 2 0 000-4Zm0 6a2 2 0 100 4 2 2 0 000-4Zm0 6a2 2 0 100 4 2 2 0 000-4Z"></path></svg>
-                            </button>
-                        </div>
-                    </div>
-
-                    <!-- Shorts Section -->
+                    <!-- 쇼츠 섹션 -->
                     <section class="shorts-section">
                         <div class="shorts-header-container">
                             <div class="shorts-header">
@@ -105,296 +53,13 @@
                                 <svg viewBox="0 0 24 24" width="24" height="24"><path d="M12 4a2 2 0 100 4 2 2 0 000-4Zm0 6a2 2 0 100 4 2 2 0 000-4Zm0 6a2 2 0 100 4 2 2 0 000-4Z" fill="white"></path></svg>
                             </button>
                         </div>
-                        <div class="shorts-grid">
-                            <div class="shorts-item">
-                                <div class="shorts-thumbnail">
-                                    <img src="https://loremflickr.com/210/373/concert?lock=10" alt="Shorts 01">
-                                </div>
-                                <div class="shorts-info">
-                                    <div class="shorts-text">
-                                        <h3 class="shorts-title">쇼츠 제목 01</h3>
-                                        <p class="shorts-meta">조회수 1만회</p>
-                                    </div>
-                                    <button class="item-menu-button">
-                                        <svg viewBox="0 0 24 24" width="24" height="24"><path d="M12 4a2 2 0 100 4 2 2 0 000-4Zm0 6a2 2 0 100 4 2 2 0 000-4Zm0 6a2 2 0 100 4 2 2 0 000-4Z" fill="#aaa"></path></svg>
-                                    </button>
-                                </div>
-                            </div>
-                            <div class="shorts-item">
-                                <div class="shorts-thumbnail">
-                                    <img src="https://loremflickr.com/210/373/concert?lock=11" alt="Shorts 02">
-                                </div>
-                                <div class="shorts-info">
-                                    <div class="shorts-text">
-                                        <h3 class="shorts-title">쇼츠 제목 02</h3>
-                                        <p class="shorts-meta">조회수 2만회</p>
-                                    </div>
-                                    <button class="item-menu-button">
-                                        <svg viewBox="0 0 24 24" width="24" height="24"><path d="M12 4a2 2 0 100 4 2 2 0 000-4Zm0 6a2 2 0 100 4 2 2 0 000-4Zm0 6a2 2 0 100 4 2 2 0 000-4Z" fill="#aaa"></path></svg>
-                                    </button>
-                                </div>
-                            </div>
-                            <div class="shorts-item">
-                                <div class="shorts-thumbnail">
-                                    <img src="https://loremflickr.com/210/373/concert?lock=12" alt="Shorts 03">
-                                </div>
-                                <div class="shorts-info">
-                                    <div class="shorts-text">
-                                        <h3 class="shorts-title">쇼츠 제목 03</h3>
-                                        <p class="shorts-meta">조회수 3만회</p>
-                                    </div>
-                                    <button class="item-menu-button">
-                                        <svg viewBox="0 0 24 24" width="24" height="24"><path d="M12 4a2 2 0 100 4 2 2 0 000-4Zm0 6a2 2 0 100 4 2 2 0 000-4Zm0 6a2 2 0 100 4 2 2 0 000-4Z" fill="#aaa"></path></svg>
-                                    </button>
-                                </div>
-                            </div>
-                            <div class="shorts-item">
-                                <div class="shorts-thumbnail">
-                                    <img src="https://loremflickr.com/210/373/concert?lock=13" alt="Shorts 04">
-                                </div>
-                                <div class="shorts-info">
-                                    <div class="shorts-text">
-                                        <h3 class="shorts-title">쇼츠 제목 04</h3>
-                                        <p class="shorts-meta">조회수 4만회</p>
-                                    </div>
-                                    <button class="item-menu-button">
-                                        <svg viewBox="0 0 24 24" width="24" height="24"><path d="M12 4a2 2 0 100 4 2 2 0 000-4Zm0 6a2 2 0 100 4 2 2 0 000-4Zm0 6a2 2 0 100 4 2 2 0 000-4Z" fill="#aaa"></path></svg>
-                                    </button>
-                                </div>
-                            </div>
-                            <div class="shorts-item">
-                                <div class="shorts-thumbnail">
-                                    <img src="https://loremflickr.com/210/373/concert?lock=14" alt="Shorts 05">
-                                </div>
-                                <div class="shorts-info">
-                                    <div class="shorts-text">
-                                        <h3 class="shorts-title">쇼츠 제목 05</h3>
-                                        <p class="shorts-meta">조회수 5만회</p>
-                                    </div>
-                                    <button class="item-menu-button">
-                                        <svg viewBox="0 0 24 24" width="24" height="24"><path d="M12 4a2 2 0 100 4 2 2 0 000-4Zm0 6a2 2 0 100 4 2 2 0 000-4Zm0 6a2 2 0 100 4 2 2 0 000-4Z" fill="#aaa"></path></svg>
-                                    </button>
-                                </div>
-                            </div>
+                        <div class="shorts-grid" id="shorts-grid">
+                            <!-- 쇼츠 영역 -->
                         </div>
                     </section>
 
                     <!-- 일반 비디오 영역 -->
-                    <div class="video-card">
-                        <div class="thumbnail">
-                            <img src="https://loremflickr.com/360/202/concert?lock=21" alt="Video 01">
-                            <span class="duration">10:00</span>
-                        </div>
-                        <div class="video-info">
-                            <img class="channel-avatar" src="https://loremflickr.com/36/36/person?lock=21" alt="Avatar">
-                            <div class="video-text">
-                                <h3 class="video-title">비디오 제목 01</h3>
-                                <p class="channel-name">채널명 01</p>
-                                <p class="video-meta">조회수 10만회 • 1일 전</p>
-                            </div>
-                            <button class="video-card-menu">
-                                <svg viewBox="0 0 24 24" width="24" height="24"><path d="M12 4a2 2 0 100 4 2 2 0 000-4Zm0 6a2 2 0 100 4 2 2 0 000-4Zm0 6a2 2 0 100 4 2 2 0 000-4Z"></path></svg>
-                            </button>
-                        </div>
-                    </div>
-
-                    <div class="video-card">
-                        <div class="thumbnail">
-                            <img src="https://loremflickr.com/360/202/concert?lock=22" alt="Video 02">
-                            <span class="duration">15:30</span>
-                        </div>
-                        <div class="video-info">
-                            <img class="channel-avatar" src="https://loremflickr.com/36/36/person?lock=22" alt="Avatar">
-                            <div class="video-text">
-                                <h3 class="video-title">비디오 제목 02</h3>
-                                <p class="channel-name">채널명 02</p>
-                                <p class="video-meta">조회수 20만회 • 2일 전</p>
-                            </div>
-                            <button class="video-card-menu">
-                                <svg viewBox="0 0 24 24" width="24" height="24"><path d="M12 4a2 2 0 100 4 2 2 0 000-4Zm0 6a2 2 0 100 4 2 2 0 000-4Zm0 6a2 2 0 100 4 2 2 0 000-4Z"></path></svg>
-                            </button>
-                        </div>
-                    </div>
-
-                    <div class="video-card">
-                        <div class="thumbnail">
-                            <img src="https://loremflickr.com/360/202/concert?lock=23" alt="Video 03">
-                            <span class="duration">20:45</span>
-                        </div>
-                        <div class="video-info">
-                            <img class="channel-avatar" src="https://loremflickr.com/36/36/person?lock=23" alt="Avatar">
-                            <div class="video-text">
-                                <h3 class="video-title">비디오 제목 03</h3>
-                                <p class="channel-name">채널명 03</p>
-                                <p class="video-meta">조회수 30만회 • 3일 전</p>
-                            </div>
-                            <button class="video-card-menu">
-                                <svg viewBox="0 0 24 24" width="24" height="24"><path d="M12 4a2 2 0 100 4 2 2 0 000-4Zm0 6a2 2 0 100 4 2 2 0 000-4Zm0 6a2 2 0 100 4 2 2 0 000-4Z"></path></svg>
-                            </button>
-                        </div>
-                    </div>
-
-                    <div class="video-card">
-                        <div class="thumbnail">
-                            <img src="https://loremflickr.com/360/202/concert?lock=24" alt="Video 04">
-                            <span class="duration">5:20</span>
-                        </div>
-                        <div class="video-info">
-                            <img class="channel-avatar" src="https://loremflickr.com/36/36/person?lock=24" alt="Avatar">
-                            <div class="video-text">
-                                <h3 class="video-title">비디오 제목 04</h3>
-                                <p class="channel-name">채널명 04</p>
-                                <p class="video-meta">조회수 40만회 • 4일 전</p>
-                            </div>
-                            <button class="video-card-menu">
-                                <svg viewBox="0 0 24 24" width="24" height="24"><path d="M12 4a2 2 0 100 4 2 2 0 000-4Zm0 6a2 2 0 100 4 2 2 0 000-4Zm0 6a2 2 0 100 4 2 2 0 000-4Z"></path></svg>
-                            </button>
-                        </div>
-                    </div>
-
-                    <div class="video-card">
-                        <div class="thumbnail">
-                            <img src="https://loremflickr.com/360/202/technology?lock=55" alt="Video 05">
-                            <span class="duration">12:10</span>
-                        </div>
-                        <div class="video-info">
-                            <img class="channel-avatar" src="https://loremflickr.com/36/36/avatar?lock=55" alt="Avatar">
-                            <div class="video-text">
-                                <h3 class="video-title">비디오 제목 05</h3>
-                                <p class="channel-name">채널명 05</p>
-                                <p class="video-meta">조회수 50만회 • 5일 전</p>
-                            </div>
-                            <button class="video-card-menu">
-                                <svg viewBox="0 0 24 24" width="24" height="24"><path d="M12 4a2 2 0 100 4 2 2 0 000-4Zm0 6a2 2 0 100 4 2 2 0 000-4Zm0 6a2 2 0 100 4 2 2 0 000-4Z"></path></svg>
-                            </button>
-                        </div>
-                    </div>
-
-                    <div class="video-card">
-                        <div class="thumbnail">
-                            <img src="https://loremflickr.com/360/202/concert?lock=26" alt="Video 06">
-                            <span class="duration">8:55</span>
-                        </div>
-                        <div class="video-info">
-                            <img class="channel-avatar" src="https://loremflickr.com/36/36/person?lock=26" alt="Avatar">
-                            <div class="video-text">
-                                <h3 class="video-title">비디오 제목 06</h3>
-                                <p class="channel-name">채널명 06</p>
-                                <p class="video-meta">조회수 60만회 • 6일 전</p>
-                            </div>
-                            <button class="video-card-menu">
-                                <svg viewBox="0 0 24 24" width="24" height="24"><path d="M12 4a2 2 0 100 4 2 2 0 000-4Zm0 6a2 2 0 100 4 2 2 0 000-4Zm0 6a2 2 0 100 4 2 2 0 000-4Z"></path></svg>
-                            </button>
-                        </div>
-                    </div>
-
-                    <div class="video-card">
-                        <div class="thumbnail">
-                            <img src="https://loremflickr.com/360/202/concert?lock=27" alt="Video 07">
-                            <span class="duration">11:20</span>
-                        </div>
-                        <div class="video-info">
-                            <img class="channel-avatar" src="https://loremflickr.com/36/36/person?lock=27" alt="Avatar">
-                            <div class="video-text">
-                                <h3 class="video-title">비디오 제목 07</h3>
-                                <p class="channel-name">채널명 07</p>
-                                <p class="video-meta">조회수 70만회 • 7일 전</p>
-                            </div>
-                            <button class="video-card-menu">
-                                <svg viewBox="0 0 24 24" width="24" height="24"><path d="M12 4a2 2 0 100 4 2 2 0 000-4Zm0 6a2 2 0 100 4 2 2 0 000-4Zm0 6a2 2 0 100 4 2 2 0 000-4Z"></path></svg>
-                            </button>
-                        </div>
-                    </div>
-
-                    <div class="video-card">
-                        <div class="thumbnail">
-                            <img src="https://loremflickr.com/360/202/concert?lock=28" alt="Video 08">
-                            <span class="duration">14:15</span>
-                        </div>
-                        <div class="video-info">
-                            <img class="channel-avatar" src="https://loremflickr.com/36/36/person?lock=28" alt="Avatar">
-                            <div class="video-text">
-                                <h3 class="video-title">비디오 제목 08</h3>
-                                <p class="channel-name">채널명 08</p>
-                                <p class="video-meta">조회수 80만회 • 8일 전</p>
-                            </div>
-                            <button class="video-card-menu">
-                                <svg viewBox="0 0 24 24" width="24" height="24"><path d="M12 4a2 2 0 100 4 2 2 0 000-4Zm0 6a2 2 0 100 4 2 2 0 000-4Zm0 6a2 2 0 100 4 2 2 0 000-4Z"></path></svg>
-                            </button>
-                        </div>
-                    </div>
-
-                    <div class="video-card">
-                        <div class="thumbnail">
-                            <img src="https://loremflickr.com/360/202/concert?lock=29" alt="Video 09">
-                            <span class="duration">9:30</span>
-                        </div>
-                        <div class="video-info">
-                            <img class="channel-avatar" src="https://loremflickr.com/36/36/person?lock=29" alt="Avatar">
-                            <div class="video-text">
-                                <h3 class="video-title">비디오 제목 09</h3>
-                                <p class="channel-name">채널명 09</p>
-                                <p class="video-meta">조회수 90만회 • 9일 전</p>
-                            </div>
-                            <button class="video-card-menu">
-                                <svg viewBox="0 0 24 24" width="24" height="24"><path d="M12 4a2 2 0 100 4 2 2 0 000-4Zm0 6a2 2 0 100 4 2 2 0 000-4Zm0 6a2 2 0 100 4 2 2 0 000-4Z"></path></svg>
-                            </button>
-                        </div>
-                    </div>
-
-                    <div class="video-card">
-                        <div class="thumbnail">
-                            <img src="https://loremflickr.com/360/202/concert?lock=30" alt="Video 10">
-                            <span class="duration">18:40</span>
-                        </div>
-                        <div class="video-info">
-                            <img class="channel-avatar" src="https://loremflickr.com/36/36/person?lock=30" alt="Avatar">
-                            <div class="video-text">
-                                <h3 class="video-title">비디오 제목 10</h3>
-                                <p class="channel-name">채널명 10</p>
-                                <p class="video-meta">조회수 100만회 • 10일 전</p>
-                            </div>
-                            <button class="video-card-menu">
-                                <svg viewBox="0 0 24 24" width="24" height="24"><path d="M12 4a2 2 0 100 4 2 2 0 000-4Zm0 6a2 2 0 100 4 2 2 0 000-4Zm0 6a2 2 0 100 4 2 2 0 000-4Z"></path></svg>
-                            </button>
-                        </div>
-                    </div>
-
-                    <div class="video-card">
-                        <div class="thumbnail">
-                            <img src="https://loremflickr.com/360/202/concert?lock=31" alt="Video 11">
-                            <span class="duration">22:10</span>
-                        </div>
-                        <div class="video-info">
-                            <img class="channel-avatar" src="https://loremflickr.com/36/36/person?lock=31" alt="Avatar">
-                            <div class="video-text">
-                                <h3 class="video-title">비디오 제목 11</h3>
-                                <p class="channel-name">채널명 11</p>
-                                <p class="video-meta">조회수 110만회 • 11일 전</p>
-                            </div>
-                            <button class="video-card-menu">
-                                <svg viewBox="0 0 24 24" width="24" height="24"><path d="M12 4a2 2 0 100 4 2 2 0 000-4Zm0 6a2 2 0 100 4 2 2 0 000-4Zm0 6a2 2 0 100 4 2 2 0 000-4Z"></path></svg>
-                            </button>
-                        </div>
-                    </div>
-
-                    <div class="video-card">
-                        <div class="thumbnail">
-                            <img src="https://loremflickr.com/360/202/concert?lock=32" alt="Video 12">
-                            <span class="duration">7:55</span>
-                        </div>
-                        <div class="video-info">
-                            <img class="channel-avatar" src="https://loremflickr.com/36/36/person?lock=32" alt="Avatar">
-                            <div class="video-text">
-                                <h3 class="video-title">비디오 제목 12</h3>
-                                <p class="channel-name">채널명 12</p>
-                                <p class="video-meta">조회수 120만회 • 12일 전</p>
-                            </div>
-                            <button class="video-card-menu">
-                                <svg viewBox="0 0 24 24" width="24" height="24"><path d="M12 4a2 2 0 100 4 2 2 0 000-4Zm0 6a2 2 0 100 4 2 2 0 000-4Zm0 6a2 2 0 100 4 2 2 0 000-4Z"></path></svg>
-                            </button>
-                        </div>
-                    </div>
+                    <div id="general-videos" style="display: contents;"></div>
                 </section>
             </main>
         </div>
@@ -404,12 +69,87 @@
         const chips = document.querySelectorAll('.chip');
         chips.forEach(chip => {
             chip.addEventListener('click', () => {
-                // 기존 활성화된 칩에서 active 클래스 제거
                 document.querySelector('.chip.active').classList.remove('active');
-                // 클릭된 칩에 active 클래스 추가
                 chip.classList.add('active');
             });
         });
+
+        // 영상 데이터 정의
+        const recommendedVideos = [
+            { id: 1, title: "추천 영상 01", channel: "추천 채널 01", views: "1만회", time: "1시간 전", duration: "3:54", thumbnail: "https://loremflickr.com/360/202/concert?lock=1", avatar: "https://loremflickr.com/36/36/person?lock=1" },
+            { id: 2, title: "추천 영상 02", channel: "추천 채널 02", views: "2만회", time: "2시간 전", duration: "6:34", thumbnail: "https://loremflickr.com/360/202/concert?lock=2", avatar: "https://loremflickr.com/36/36/person?lock=2" },
+            { id: 3, title: "추천 영상 03", channel: "추천 채널 03", views: "3만회", time: "3시간 전", duration: "12:45", thumbnail: "https://loremflickr.com/360/202/concert?lock=3", avatar: "https://loremflickr.com/36/36/person?lock=3" },
+        ];
+
+        const shortsData = [
+            { id: 10, title: "쇼츠 제목", views: "1만회", thumbnail: "https://loremflickr.com/210/373/concert?lock=10" },
+            { id: 11, title: "쇼츠 제목", views: "2만회", thumbnail: "https://loremflickr.com/210/373/concert?lock=11" },
+            { id: 12, title: "쇼츠 제목", views: "3만회", thumbnail: "https://loremflickr.com/210/373/concert?lock=12" },
+            { id: 13, title: "쇼츠 제목", views: "4만회", thumbnail: "https://loremflickr.com/210/373/concert?lock=13" },
+            { id: 14, title: "쇼츠 제목", views: "5만회", thumbnail: "https://loremflickr.com/210/373/concert?lock=14" },
+        ];
+
+        const generalVideos = [
+            { id: 21, title: "영상 제목 01", channel: "채널명", views: "42만회", time: "2일 전", duration: "15:40", thumbnail: "https://loremflickr.com/360/202/concert?lock=21", avatar: "https://loremflickr.com/36/36/person?lock=21" },
+            { id: 22, title: "영상 제목 02", channel: "채널명", views: "5.2만회", time: "12시간 전", duration: "08:25", thumbnail: "https://loremflickr.com/360/202/concert?lock=22", avatar: "https://loremflickr.com/36/36/person?lock=22" },
+            { id: 23, title: "영상 제목 03", channel: "채널명", views: "12만회", time: "4일 전", duration: "06:15", thumbnail: "https://loremflickr.com/360/202/concert?lock=23", avatar: "https://loremflickr.com/36/36/person?lock=23" },
+            { id: 24, title: "영상 제목 04", channel: "채널명", views: "3.7만회", time: "6일 전", duration: "22:10", thumbnail: "https://loremflickr.com/360/202/concert?lock=24", avatar: "https://loremflickr.com/36/36/person?lock=24" },
+            { id: 25, title: "영상 제목 05", channel: "채널명", views: "9.1만회", time: "1일 전", duration: "11:35", thumbnail: "https://loremflickr.com/360/202/concert?lock=25", avatar: "https://loremflickr.com/36/36/person?lock=25" },
+            { id: 26, title: "영상 제목 06", channel: "채널명", views: "21만회", time: "1주일 전", duration: "18:50", thumbnail: "https://loremflickr.com/360/202/concert?lock=26", avatar: "https://loremflickr.com/36/36/person?lock=26" },
+            { id: 27, title: "영상 제목 07", channel: "채널명", views: "6.8만회", time: "3일 전", duration: "14:20", thumbnail: "https://loremflickr.com/360/202/concert?lock=27", avatar: "https://loremflickr.com/36/36/person?lock=27" },
+            { id: 28, title: "영상 제목 08", channel: "채널명", views: "4.5만회", time: "5일 전", duration: "09:45", thumbnail: "https://loremflickr.com/360/202/concert?lock=28", avatar: "https://loremflickr.com/36/36/person?lock=28" },
+            { id: 29, title: "영상 제목 09", channel: "채널명", views: "35만회", time: "2일 전", duration: "25:30", thumbnail: "https://loremflickr.com/360/202/concert?lock=29", avatar: "https://loremflickr.com/36/36/person?lock=29" },
+            { id: 30, title: "영상 제목 10", channel: "채널명", views: "18만회", time: "14시간 전", duration: "07:12", thumbnail: "https://loremflickr.com/360/202/concert?lock=30", avatar: "https://loremflickr.com/36/36/person?lock=30" },
+            { id: 31, title: "영상 제목 11", channel: "채널명", views: "11만회", time: "4일 전", duration: "1:02:40", thumbnail: "https://loremflickr.com/360/202/concert?lock=31", avatar: "https://loremflickr.com/36/36/person?lock=31" },
+            { id: 32, title: "영상 제목 12", channel: "채널명", views: "7.4만회", time: "2일 전", duration: "19:15", thumbnail: "https://loremflickr.com/360/202/concert?lock=32", avatar: "https://loremflickr.com/36/36/person?lock=32" }
+        ];
+
+        // 템플릿 생성 함수
+        function createVideoCard(video) {
+            return `
+                <div class="video-card">
+                    <div class="thumbnail">
+                        <img src="${video.thumbnail}" alt="${video.title}">
+                        ${video.duration ? `<span class="duration">${video.duration}</span>` : ''}
+                    </div>
+                    <div class="video-info">
+                        <img class="channel-avatar" src="${video.avatar}" alt="Avatar">
+                        <div class="video-text">
+                            <h3 class="video-title">${video.title}</h3>
+                            <p class="channel-name">${video.channel}</p>
+                            <p class="video-meta">조회수 ${video.views} • ${video.time}</p>
+                        </div>
+                        <button class="video-card-menu">
+                            <svg viewBox="0 0 24 24" width="24" height="24"><path d="M12 4a2 2 0 100 4 2 2 0 000-4Zm0 6a2 2 0 100 4 2 2 0 000-4Zm0 6a2 2 0 100 4 2 2 0 000-4Z"></path></svg>
+                        </button>
+                    </div>
+                </div>
+            `;
+        }
+
+        function createShortsItem(short) {
+            return `
+                <div class="shorts-item">
+                    <div class="shorts-thumbnail">
+                        <img src="${short.thumbnail}" alt="${short.title}">
+                    </div>
+                    <div class="shorts-info">
+                        <div class="shorts-text">
+                            <h3 class="shorts-title">${short.title}</h3>
+                            <p class="shorts-meta">조회수 ${short.views}</p>
+                        </div>
+                        <button class="item-menu-button">
+                            <svg viewBox="0 0 24 24" width="24" height="24"><path d="M12 4a2 2 0 100 4 2 2 0 000-4Zm0 6a2 2 0 100 4 2 2 0 000-4Zm0 6a2 2 0 100 4 2 2 0 000-4Z" fill="#aaa"></path></svg>
+                        </button>
+                    </div>
+                </div>
+            `;
+        }
+
+        // 화면 렌더링
+        document.getElementById('recommended-videos').innerHTML = recommendedVideos.map(createVideoCard).join('');
+        document.getElementById('shorts-grid').innerHTML = shortsData.map(createShortsItem).join('');
+        document.getElementById('general-videos').innerHTML = generalVideos.map(createVideoCard).join('');
     </script>
 </body>
 </html>
