@@ -25,6 +25,46 @@ body {
     z-index: 100;
 }
 
+/* 유튜브 아이콘 버튼 */
+.yt-icon-button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 8px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    width: 40px;
+    height: 40px;
+    box-sizing: border-box;
+}
+
+.yt-icon-button:hover {
+    background-color: #f2f2f2;
+}
+
+.yt-icon-button:active .yt-interaction {
+    background-color: #e5e5e5;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 50%;
+    z-index: -1;
+}
+
+.yt-icon-shape {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 24px;
+    height: 24px;
+    fill: #0f0f0f;
+}
+
 .header-placeholder {
     color: #606060;
     font-size: 14px;
