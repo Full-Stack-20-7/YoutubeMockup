@@ -6,11 +6,11 @@
 📦 YOUTUBEMOCKUP
  ┣ 📂 assets           # 정적 파일 (이미지, 아이콘 등)
  ┃
- ┣ 📂 css              # 스타일시트 (역할별 분리)
+ ┣ 📂 css              # 스타일시트
  ┃ ┣ header.css        # 헤더
  ┃ ┣ sidebar.css       # 사이드바
  ┃ ┣ main.css          # 메인 화면 페이지
- ┃ ┗ video.css         # 비디오 재생 페이지
+ ┃ ┗ video.css         # 비디오 페이지
  ┃
  ┣ 📂 js               # 자바스크립트
  ┃ ┣ common.js         # 공통 기능 (사이드바 토글 등)

@@ -32,6 +32,14 @@ async function loadSidebar() {
                     item.classList.add('active');
                 });
             });
+
+            // 사이드바 내부 가이드 버튼 토글 기능
+            const sidebarGuideButton = document.getElementById('sidebar-guide-button');
+            if (sidebarGuideButton) {
+                sidebarGuideButton.addEventListener('click', () => {
+                    appContainer.classList.toggle('collapsed');
+                });
+            }
         };
         bindSidebarEvents();
     } catch (error) {
