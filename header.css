@@ -1,0 +1,60 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+.yt-header {
+  height: 56px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 16px;
+  border-bottom: 1px solid #ddd;
+  background: white;
+}
+
+.left .logo {
+  height: 20px;
+}
+
+.center {
+  display: flex;
+  width: 50%;
+}
+
+.center input {
+  flex: 1;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 2px 0 0 2px;
+}
+
+.center button {
+  width: 60px;
+  border: 1px solid #ccc;
+  border-left: none;
+  background: #f8f8f8;
+  cursor: pointer;
+}
+
+.right span {
+  margin-left: 16px;
+  cursor: pointer;
+}
+
+.profile {
+  background: #eee;
+  padding: 6px;
+  border-radius: 50%;
+}
+
+
+.icon {
+    width: 40px;
+    height: 40px;
+}
+
+
+.plus {
+    height: 36px;
+}
