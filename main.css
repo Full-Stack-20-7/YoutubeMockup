@@ -191,6 +191,28 @@ body {
     flex: 1;
 }
 
+.video-card-menu {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 4px;
+    border-radius: 50%;
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: -4px; /* Align with title top */
+}
+
+.video-card-menu:hover {
+    background-color: #f2f2f2;
+}
+
+.video-card-menu svg path {
+    fill: #0f0f0f;
+}
+
 .video-text.no-avatar {
     padding-left: 0;
 }
