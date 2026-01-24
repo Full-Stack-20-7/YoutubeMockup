@@ -1,13 +1,39 @@
 // 사이드바 로드 및 토글 기능
 const appContainer = document.querySelector('.app-container');
 const sidebarContainer = document.getElementById('sidebar-container');
-const guideButton = document.getElementById('guide-button');
+const headerContainer = document.getElementById('header-container');
 const scrim = document.getElementById('scrim');
 
-// 토글 기능 바인딩
-guideButton.addEventListener('click', () => {
-    appContainer.classList.toggle('collapsed');
-});
+// 토글 기능 바인딩 함수
+function bindToggleEvent() {
+    const guideButton = document.getElementById('guide-button');
+    if (guideButton) {
+        guideButton.addEventListener('click', () => {
+            appContainer.classList.toggle('collapsed');
+        });
+    }
+}
+
+// 헤더 로드
+async function loadHeader() {
+    try {
+        const response = await fetch('header.html');
+        if (!response.ok) throw new Error('Network response was not ok');
+        const html = await response.text();
+        
+        // header.html에서 <header> 부분만 추출하여 삽입
+        const parser = new DOMParser();
+        const doc = parser.parseFromString(html, 'text/html');
+        const headerContent = doc.querySelector('.yt-header');
+        if (headerContent) {
+            headerContainer.innerHTML = '';
+            headerContainer.appendChild(headerContent);
+            bindToggleEvent(); // 헤더 로드 후 이벤트 바인딩
+        }
+    } catch (error) {
+        console.error('헤더를 불러오는 데 실패했습니다:', error);
+    }
+}
 
 // 스크림 클릭 시 사이드바 닫기
 scrim.addEventListener('click', () => {
@@ -48,6 +74,7 @@ async function loadSidebar() {
     }
 }
 
+loadHeader();
 loadSidebar();
 
 // 필터 칩 클릭 이벤트 핸들러

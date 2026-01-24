@@ -11,10 +11,20 @@ body {
   padding: 0 16px;
   border-bottom: 1px solid #ddd;
   background: white;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.left {
+  display: flex;
+  align-items: center;
+  gap: 8px;
 }
 
 .left .logo {
   height: 20px;
+  margin-left: 8px;
 }
 
 .center {
@@ -37,24 +47,22 @@ body {
   cursor: pointer;
 }
 
-.right span {
-  margin-left: 16px;
+.right {
+  display: flex;
+  align-items: flex-end;
+  gap: 2px;
+}
+
+.right .icon {
+  width: 40px;
+  height: 40px;
   cursor: pointer;
+  padding: 2px;
+  box-sizing: border-box;
 }
-
-.profile {
-  background: #eee;
-  padding: 6px;
-  border-radius: 50%;
-}
-
-
-.icon {
-    width: 40px;
-    height: 40px;
-}
-
 
 .plus {
     height: 36px;
+    cursor: pointer;
+    padding: 6px;
 }
