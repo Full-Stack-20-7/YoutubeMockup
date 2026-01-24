@@ -5,70 +5,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>YouTube Mockup - Main Page</title>
     <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="sidebar.css">
 </head>
 <body>
     <div class="app-container">
         <!-- 헤더 -->
         <header class="header">
-            <div class="header-placeholder">헤더 영역</div>
+            <div class="header-left">
+                <button id="guide-button" class="icon-button">
+                    <svg viewBox="0 0 24 24" width="24" height="24"><path d="M21 6H3V5h18v1zm0 5H3v1h18v-1zm0 5H3v1h18v-1z"></path></svg>
+                </button>
+            </div>
         </header>
 
         <div class="main-container">
-            <!-- 사이드바 -->
-            <aside class="sidebar">
-                <ul class="menu-group">
-                    <li class="menu-item">
-                        <span class="icon"><img src="assets/music.svg" alt="음악"></span> 음악
-                    </li>
-                    <li class="menu-item">
-                        <span class="icon"><img src="assets/movie.svg" alt="영화"></span> 영화
-                    </li>
-                    <li class="menu-item">
-                        <span class="icon"><img src="assets/more.svg" alt="더보기"></span> 더보기
-                    </li>
-                </ul>
-
-                <div class="divider"></div>
-
-                <div class="section-title">YouTube 더보기</div>
-                <ul class="menu-group">
-                    <li class="menu-item">
-                        <span class="icon"><img src="assets/premium.svg" alt="Premium"></span> YouTube Premium
-                    </li>
-                    <li class="menu-item">
-                        <span class="icon"><img src="assets/music2.svg" alt="Music"></span> YouTube Music
-                    </li>
-                    <li class="menu-item">
-                        <span class="icon"><img src="assets/kid.svg" alt="Kids"></span> YouTube Kids
-                    </li>
-                </ul>
-
-                <div class="divider"></div>
-
-                <ul class="menu-group">
-                    <li class="menu-item">
-                        <span class="icon"><img src="assets/setting.svg" alt="설정"></span> 설정
-                    </li>
-                    <li class="menu-item">
-                        <span class="icon"><img src="assets/report.svg" alt="신고"></span> 신고 기록
-                    </li>
-                    <li class="menu-item">
-                        <span class="icon"><img src="assets/help.svg" alt="고객센터"></span> 고객센터
-                    </li>
-                    <li class="menu-item">
-                        <span class="icon"><img src="assets/feedback.svg" alt="의견"></span> 의견 보내기
-                    </li>
-                </ul>
-
-                <div class="divider"></div>
-
-                <footer class="sidebar-footer">
-                    <p>정보 보도자료 저작권 문의하기<br>크리에이터 광고 개발자</p>
-                    <p>약관 개인정보처리방침<br>정책 및 안전<br>YouTube 작동의 원리<br>새로운 기능 테스트하기</p>
-                    <p class="copyright">© 2026 Google LLC</p>
-                </footer>
-            </aside>
-
+            <!-- 사이드바 영역 -->
+            <div id="sidebar-container"></div>
+            
             <!-- 본문 영역 -->
             <main class="content">
                 <!-- 필터 칩 -->
