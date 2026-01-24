@@ -2,10 +2,16 @@
 const appContainer = document.querySelector('.app-container');
 const sidebarContainer = document.getElementById('sidebar-container');
 const guideButton = document.getElementById('guide-button');
+const scrim = document.getElementById('scrim');
 
 // 토글 기능 바인딩
 guideButton.addEventListener('click', () => {
     appContainer.classList.toggle('collapsed');
+});
+
+// 스크림 클릭 시 사이드바 닫기
+scrim.addEventListener('click', () => {
+    appContainer.classList.add('collapsed');
 });
 
 async function loadSidebar() {

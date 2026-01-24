@@ -7,11 +7,13 @@
     top: 56px;
     background-color: #fff;
     overflow-y: auto; 
-    z-index: 90;
+    z-index: 1000;
+    box-shadow: 10px 0 20px rgba(0,0,0,0.1);
+    transition: transform 0.2s;
 }
 
 .mini-sidebar {
-    display: none;
+    display: flex;
     flex-direction: column;
     width: 72px;
     height: calc(100vh - 56px);
@@ -83,15 +85,27 @@
 
 /* 접힘 상태 클래스 */
 .app-container.collapsed .sidebar {
-    display: none;
+    transform: translateX(-240px);
 }
 
 .app-container.collapsed .mini-sidebar {
     display: flex;
 }
 
-.app-container.collapsed .content {
-    margin-left: 72px;
+/* Scrim (배경 어둡게 처리) */
+.scrim {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+    display: none;
+}
+
+.app-container:not(.collapsed) .scrim {
+    display: block;
 }
 
 /* 아이콘 영역 (이미지가 들어갈 자리) */
