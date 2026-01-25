@@ -1,203 +1,196 @@
-/* 사이드바 스타일 */
 .sidebar {
-    width: 240px;
-    height: 100vh;
-    position: fixed;
-    left: 0;
-    top: 0;
-    background-color: #fff;
-    display: flex;
-    flex-direction: column;
-    z-index: 1001;
-    box-shadow: 10px 0 20px rgba(0,0,0,0.1);
-    transition: transform 0.2s;
+  width: 240px;
+  height: 100vh;
+  position: fixed;
+  left: 0;
+  top: 0;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  z-index: 1001;
+  box-shadow: 10px 0 20px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s;
 }
 
 .sidebar-content {
-    flex: 1;
-    overflow-y: auto;
+  flex: 1;
+  overflow-y: auto;
 }
 
 .sidebar-header {
-    display: flex;
-    align-items: center;
-    padding: 0 16px;
-    height: 56px;
+  display: flex;
+  align-items: center;
+  padding: 0 16px;
+  height: 56px;
 }
 
 .sidebar-header .yt-icon-button {
-    margin-right: 16px;
+  margin-right: 16px;
 }
 
 .sidebar-header .logo-container {
-    display: flex;
-    align-items: center;
-    text-decoration: none;
-    position: relative;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  position: relative;
 }
 
 .sidebar-header .country-code {
-    font-size: 10px;
-    color: #606060;
-    margin-left: 5px;
-    align-self: flex-start;
-    margin-top: -5px;
+  font-size: 10px;
+  color: #606060;
+  margin-left: 5px;
+  align-self: flex-start;
+  margin-top: -5px;
 }
 
 .mini-sidebar {
-    display: none;
-    flex-direction: column;
-    width: 72px;
-    height: calc(100vh - 56px);
-    position: fixed;
-    left: 0;
-    top: 56px;
-    background-color: #fff;
-    padding: 0 4px;
-    z-index: 90;
-    box-sizing: border-box;
+  display: none;
+  flex-direction: column;
+  width: 72px;
+  height: calc(100vh - 56px);
+  position: fixed;
+  left: 0;
+  top: 56px;
+  background-color: #fff;
+  padding: 0 4px;
+  z-index: 90;
+  box-sizing: border-box;
 }
 
-/* 메뉴 아이템 공통 스타일 */
 .menu-group {
-    list-style: none;
-    padding: 12px;
+  list-style: none;
+  padding: 12px;
 }
 
 .menu-item {
-    display: flex;
-    align-items: center;
-    padding: 0 12px;
-    height: 40px;
-    border-radius: 10px;
-    cursor: pointer;
-    font-size: 14px;
-    color: #0f0f0f;
+  display: flex;
+  align-items: center;
+  padding: 0 12px;
+  height: 40px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 14px;
+  color: #0f0f0f;
 }
 
 .menu-item.active {
-    background-color: #f2f2f2;
-    font-weight: 500;
+  background-color: #f2f2f2;
+  font-weight: 500;
 }
 
 .menu-item:hover {
-    background-color: #f2f2f2;
+  background-color: #f2f2f2;
 }
 
-/* 미니 사이드바 아이템 스타일 */
 .mini-items {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 
 .mini-menu-item {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 16px 0 14px 0;
-    cursor: pointer;
-    border-radius: 10px;
-    text-decoration: none;
-    color: #0f0f0f;
-    min-height: 74px;
-    box-sizing: border-box;
-    width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 16px 0 14px 0;
+  cursor: pointer;
+  border-radius: 10px;
+  text-decoration: none;
+  color: #0f0f0f;
+  min-height: 74px;
+  box-sizing: border-box;
+  width: 100%;
 }
 
 .mini-menu-item:hover {
-    background-color: #f2f2f2;
+  background-color: #f2f2f2;
 }
 
 .mini-menu-item .mini-icon {
-    width: 24px;
-    height: 24px;
-    margin-bottom: 6px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  width: 24px;
+  height: 24px;
+  margin-bottom: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .mini-menu-item .title {
-    font-size: 10px;
-    text-align: center;
-    width: 100%;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-    line-height: 1.2;
+  font-size: 10px;
+  text-align: center;
+  width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  line-height: 1.2;
 }
 
 .mini-menu-item.active .title {
-    font-weight: 500;
+  font-weight: 500;
 }
 
 .mini-menu-item svg path {
-    fill: #0f0f0f;
+  fill: #0f0f0f;
 }
 
-/* 접힘 상태 클래스 */
 .app-container.collapsed .sidebar {
-    transform: translateX(-240px);
+  transform: translateX(-240px);
 }
 
 .app-container.collapsed .mini-sidebar {
-    display: flex;
+  display: flex;
 }
 
-/* Scrim (배경 어둡게 처리) */
 .scrim {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: rgba(0, 0, 0, 0.5);
-    z-index: 999;
-    display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 999;
+  display: none;
 }
 
 .app-container:not(.collapsed) .scrim {
-    display: block;
+  display: block;
 }
 
-/* 아이콘 영역 (이미지가 들어갈 자리) */
 .icon {
-    width: 24px;     
-    height: 24px;     
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-right: 24px; 
+  width: 24px;
+  height: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 24px;
 }
 
-.icon img, .icon svg {
-    width: 24px;
-    height: 24px;
+.icon img,
+.icon svg {
+  width: 24px;
+  height: 24px;
 }
 
-.icon svg path, .mini-menu-item svg path {
-    fill: #0f0f0f;
+.icon svg path,
+.mini-menu-item svg path {
+  fill: #0f0f0f;
 }
 
-/* 섹션 타이틀 및 구분선 */
 .section-title {
-    padding: 10px 24px;
-    font-size: 16px;
-    font-weight: 500;
+  padding: 10px 24px;
+  font-size: 16px;
+  font-weight: 500;
 }
 
 .divider {
-    height: 1px;
-    background-color: #e5e5e5;
-    margin: 8px 12px;
+  height: 1px;
+  background-color: #e5e5e5;
+  margin: 8px 12px;
 }
 
-/* 푸터 정보 */
 .sidebar-footer {
-    padding: 16px 24px;
-    font-size: 12px;
-    color: #606060;
-    line-height: 1.8;
+  padding: 16px 24px;
+  font-size: 12px;
+  color: #606060;
+  line-height: 1.8;
 }
-

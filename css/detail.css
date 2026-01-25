@@ -105,12 +105,15 @@ button {
 
 .video {
   padding: 10px;
+
+  h1 {
+    font-size: 20px;
+  }
 }
 
 .bottom-container {
   display: flex;
   align-items: flex-start;
-  /* gap: 16px; */
 }
 
 .left-column {
@@ -118,7 +121,7 @@ button {
   min-width: 0;
   display: flex;
   flex-direction: column;
-  gap: 0; /* 딱 붙게 */
+  gap: 0;
   padding: 16px 0;
 }
 
@@ -142,10 +145,9 @@ button {
   width: 100%;
   height: auto;
   aspect-ratio: 16 / 9;
-  max-height: 765px; /* 필요하면 유지 */
+  max-height: 765px;
 }
 
-/* 필터 바 */
 .filter-bar {
   top: 0;
   background-color: #ffffff;
@@ -153,8 +155,8 @@ button {
   z-index: 10;
   overflow-x: auto;
   white-space: nowrap;
-  -ms-overflow-style: none; /* IE and Edge */
-  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }
 
 .filter-bar::-webkit-scrollbar {
@@ -186,7 +188,6 @@ button {
   color: #ffffff;
 }
 
-/* 비디오 그리드 */
 .video-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
@@ -194,7 +195,6 @@ button {
   padding-top: 12px;
 }
 
-/* 비디오 카드 */
 .video-card {
   display: flex;
   justify-content: space-between;
@@ -249,6 +249,13 @@ button {
   justify-content: flex-start;
   gap: 12px;
   flex: 1;
+
+  img {
+    width: 40px;
+    height: 40px;
+    object-fit: cover;
+    border-radius: 50%;
+  }
 }
 
 .video-description {
@@ -443,7 +450,6 @@ button {
   background-color: rgba(6, 95, 212, 0.1);
 }
 
-/* 쇼츠 영역 */
 .shorts-section {
   grid-column: 1 / -1;
 
@@ -495,17 +501,17 @@ button {
   display: flex;
   gap: 12px;
 
-  overflow-x: auto; /* 스크롤 가능 */
+  overflow-x: auto;
   overflow-y: hidden;
 
-  scrollbar-width: none; /* Firefox: 스크롤바 숨김 */
-  -ms-overflow-style: none; /* IE/Edge(레거시): 숨김 */
+  scrollbar-width: none;
+  -ms-overflow-style: none;
 
-  -webkit-overflow-scrolling: touch; /* iOS: 부드러운 스크롤 */
+  -webkit-overflow-scrolling: touch;
 }
 
 .shorts-grid::-webkit-scrollbar {
-  display: none; /* Chrome/Safari: 스크롤바 숨김 */
+  display: none;
 }
 
 .shorts-item {
@@ -599,7 +605,7 @@ button {
 }
 
 .shorts-grid {
-  touch-action: pan-y; /* 세로 스크롤은 살리고, 가로 드래그는 우리가 처리 */
+  touch-action: pan-y;
 }
 
 .shorts-grid.is-dragging,
@@ -684,7 +690,6 @@ button {
   color: #606060;
 }
 
-/* 반응형 웹 */
 @media (max-width: 574px) {
   .video-info {
     flex-direction: column;
@@ -697,7 +702,7 @@ button {
     display: none;
   }
   .content {
-    margin-left: 0; /* 모바일에서 사이드바가 사라지면 여백 제거 */
+    margin-left: 0;
   }
   .video-grid {
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
