@@ -7,22 +7,26 @@ body {
   color: #0f0f0f;
 }
 
+a,
+a:visited,
+a:hover,
+a:active {
+  color: inherit;
+  text-decoration: none;
+}
+
 .app-container {
   display: flex;
   flex-direction: column;
   height: 100vh;
 }
 
-button {
-  border: none;
-}
-
 .header {
   height: 56px;
   background-color: #ffffff;
-  border-bottom: 1px solid #e5e5e5;
   display: flex;
   align-items: center;
+  justify-content: space-between;
   padding: 0 16px;
   position: sticky;
   top: 0;
@@ -74,71 +78,24 @@ button {
   font-size: 14px;
 }
 
-.detail-container {
+.main-container {
   display: flex;
   flex: 1;
   overflow: hidden;
 }
 
 /* 메인 컨텐츠 */
-.detail-content {
+.content {
   flex: 1;
   overflow-y: auto;
-  overflow-x: hidden;
-  padding: 0;
+  padding: 0 24px;
+  margin-left: 72px; /* 미니 사이드바 너비만큼 왼쪽 여백 고정 */
   background-color: #ffffff;
-}
-
-.video-section {
-  margin: 0;
-  padding: 0;
-  height: 100%; /* Ensure body and html take up full height of the page */
-}
-
-.video {
-  padding: 10px;
-}
-
-.bottom-container {
-  display: flex;
-  align-items: flex-start;
-  /* gap: 16px; */
-}
-
-.left-column {
-  flex: 1;
-  min-width: 0;
-  display: flex;
-  flex-direction: column;
-  gap: 0; /* 딱 붙게 */
-  padding: 16px 0;
-}
-
-.left-container {
-  max-width: calc((100vh - 56px - 12px - 92px) * (16 / 9));
-  min-width: calc(360px * (16 / 9));
-}
-
-.right-container {
-  flex: 0 0 402px;
-  width: 402px;
-  min-width: 300px;
-  padding-right: 16px;
-}
-
-.comments {
-  padding: 10px;
-}
-
-.full-size-iframe {
-  width: 100%;
-  height: auto;
-  aspect-ratio: 16 / 9;
-  max-height: 765px; /* 필요하면 유지 */
 }
 
 /* 필터 바 */
 .filter-bar {
+  position: sticky;
   top: 0;
   background-color: #ffffff;
   padding: 12px 0;
@@ -181,7 +138,7 @@ button {
 /* 비디오 그리드 */
 .video-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   gap: 16px;
   padding-top: 12px;
 }
@@ -189,23 +146,13 @@ button {
 /* 비디오 카드 */
 .video-card {
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
   cursor: pointer;
-  gap: 8px;
-
-  button {
-    width: 36px;
-    height: 36px;
-    position: absolute;
-    top: -6px;
-    right: -10px;
-  }
 }
 
 .thumbnail {
   position: relative;
-  width: 168px;
-  height: 100px;
+  width: 100%;
   aspect-ratio: 16 / 9;
   border-radius: 12px;
   overflow: hidden;
@@ -230,107 +177,10 @@ button {
   font-weight: 500;
 }
 
-.video-content {
-  display: flex;
-  justify-content: space-between;
-}
-
 .video-info {
-  position: relative;
   display: flex;
-  justify-content: flex-start;
   gap: 12px;
-  flex: 1;
-}
-
-.video-description {
-  background-color: rgba(0, 0, 0, 0.05);
-  border-radius: 12px;
-  padding: 12px;
-  margin-top: 12px;
-}
-
-.description-header {
-  display: flex;
-  font-size: 14px;
-  font-weight: 600;
-  gap: 8px;
-}
-
-.reaction-button {
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  gap: 6px;
-
-  button {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 36px;
-    background: rgba(0, 0, 0, 0.05);
-    position: relative;
-    cursor: pointer;
-  }
-}
-
-.up-down-items {
-  display: flex;
-  align-items: center;
-  color: #0f0f0f;
-}
-
-.up-down-item {
-  padding: 0 16px;
-}
-
-.reaction-item {
-  padding: 0 16px;
-  border-radius: 18px;
-
-  img {
-    margin-right: 10px;
-  }
-}
-
-.dot {
-  padding: 0 !important;
-  width: 36px;
-  img {
-    margin-right: 0 !important;
-  }
-}
-
-.up {
-  border-radius: 18px 0 0 18px;
-  position: relative;
-
-  img {
-    margin-right: 10px;
-  }
-}
-
-.up::after {
-  content: "";
-  background: rgba(0, 0, 0, 0.1);
-  position: absolute;
-  right: 0;
-  top: 6px;
-  height: 24px;
-  width: 1px;
-}
-
-.down {
-  width: 52px;
-  border-radius: 0 18px 18px 0;
-}
-
-.re-icon {
-  width: 20px;
-}
-
-.down-icon {
-  transform: rotate(180deg);
+  padding: 12px 0;
 }
 
 .channel-avatar {
@@ -341,7 +191,29 @@ button {
 }
 
 .video-text {
-  margin-right: 24px;
+  flex: 1;
+}
+
+.video-card-menu {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 4px;
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: -4px; /* Align with title top */
+}
+
+.video-card-menu:hover {
+  background-color: #f2f2f2;
+}
+
+.video-card-menu svg path {
+  fill: #0f0f0f;
 }
 
 .video-text.no-avatar {
@@ -350,7 +222,7 @@ button {
 
 .video-title {
   margin: 0;
-  font-size: 14px;
+  font-size: 16px;
   font-weight: 500;
   line-height: 1.4;
   display: -webkit-box;
@@ -360,46 +232,16 @@ button {
   overflow: hidden;
 }
 
-.subscribe-button {
-  width: 56.234px;
-  height: 36px;
-  background-color: black;
-  color: white;
-  border-radius: 18px;
-}
-
 .channel-name {
   margin: 4px 0 0;
-  font-size: 12px;
+  font-size: 14px;
   color: #606060;
 }
 
 .video-meta {
   margin: 2px 0 0;
-  font-size: 12px;
+  font-size: 14px;
   color: #606060;
-}
-
-.description-content {
-  width: 100%;
-  max-width: 100%;
-
-  pre {
-    margin: 0;
-    width: 100%;
-    max-width: 100%;
-
-    white-space: pre-wrap;
-    word-break: break-word;
-    overflow-wrap: anywhere;
-
-    font-family: Roboto, Arial, sans-serif;
-    font-size: 14px;
-    line-height: 1.6;
-  }
-}
-.video h1 {
-  margin: 0 0 12px;
 }
 
 /* 광고 카드 */
@@ -438,9 +280,10 @@ button {
 /* 쇼츠 영역 */
 .shorts-section {
   grid-column: 1 / -1;
-
+  margin: 24px 0;
   border-top: 4px solid #ffffff;
   border-bottom: 4px solid #ffffff;
+  padding: 24px 0;
 }
 
 .shorts-header-container {
@@ -484,24 +327,20 @@ button {
 }
 
 .shorts-grid {
-  display: flex;
+  display: flex; /* Horizontal alignment */
+  overflow-x: auto; /* Horizontal scroll */
+  overflow-y: hidden; /* Hide vertical scroll */
   gap: 12px;
-
-  overflow-x: auto; /* 스크롤 가능 */
-  overflow-y: hidden;
-
-  scrollbar-width: none; /* Firefox: 스크롤바 숨김 */
-  -ms-overflow-style: none; /* IE/Edge(레거시): 숨김 */
-
-  -webkit-overflow-scrolling: touch; /* iOS: 부드러운 스크롤 */
+  -ms-overflow-style: none; /* Hide scrollbar for IE/Edge */
+  scrollbar-width: none; /* Hide scrollbar for Firefox */
 }
 
 .shorts-grid::-webkit-scrollbar {
-  display: none; /* Chrome/Safari: 스크롤바 숨김 */
+  display: none; /* Hide scrollbar for Chrome/Safari */
 }
 
 .shorts-item {
-  flex: 0 0 131px;
+  flex: 0 0 210px; /* Fixed width */
   display: flex;
   flex-direction: column;
   cursor: pointer;
@@ -583,107 +422,7 @@ button {
   fill: #0f0f0f;
 }
 
-.mini-sidebar {
-  display: none !important;
-}
-.yt-header {
-  background-color: #000 !important;
-}
-
-.shorts-grid {
-  touch-action: pan-y; /* 세로 스크롤은 살리고, 가로 드래그는 우리가 처리 */
-}
-
-.shorts-grid.is-dragging,
-.shorts-grid.is-dragging * {
-  user-select: none;
-}
-
-.comments-header {
-  display: flex;
-  align-items: center;
-  gap: 18px;
-  margin-bottom: 14px;
-}
-
-.comments-count {
-  font-size: 20px;
-  font-weight: 700;
-  margin: 0;
-}
-
-.comments-count .count {
-  font-weight: 700;
-}
-
-.sort-btn {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  border: 0;
-  background: transparent;
-  color: #0f0f0f;
-  cursor: pointer;
-  padding: 6px 8px;
-  border-radius: 18px;
-}
-
-.sort-btn:hover {
-  background: rgba(0, 0, 0, 0.06);
-}
-
-.sort-icon {
-  width: 22px;
-  height: 22px;
-  fill: currentColor;
-}
-
-.sort-text {
-  font-size: 14px;
-  font-weight: 500;
-}
-
-.comment-write {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-
-.comment-avatar {
-  width: 24px;
-  height: 24px;
-  border-radius: 999px;
-  object-fit: cover;
-  flex: 0 0 auto;
-}
-
-.comment-input-wrap {
-  flex: 1;
-  border-bottom: 1px solid #e5e5e5;
-  padding: 6px 0 8px;
-}
-
-.comment-input {
-  width: 100%;
-  border: 0;
-  outline: 0;
-  background: transparent;
-  font-size: 14px;
-  color: #0f0f0f;
-}
-
-.comment-input::placeholder {
-  color: #606060;
-}
-
 /* 반응형 웹 */
-@media (max-width: 574px) {
-  .video-info {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-}
-
 @media (max-width: 768px) {
   .sidebar {
     display: none;
@@ -693,68 +432,5 @@ button {
   }
   .video-grid {
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-  }
-}
-
-@media (max-width: 1014px) {
-  body {
-    overflow: hidden;
-  }
-
-  .thumbnail {
-    width: 100%;
-    height: 100%;
-  }
-
-  .video-grid {
-    padding: 0 16px;
-  }
-  .video-card {
-    flex-direction: column;
-  }
-
-  .bottom-container {
-    display: flex;
-    flex-direction: column;
-  }
-
-  .left-column {
-    display: contents;
-  }
-
-  .left-container {
-    order: 1;
-  }
-
-  .right-container {
-    order: 2;
-    width: 100%;
-    flex: none;
-    padding-right: 0;
-  }
-
-  .comments {
-    order: 3;
-    width: 100%;
-  }
-
-  .filter-bar {
-    padding: 16px;
-  }
-}
-
-@media (min-width: 1015px) {
-  .left-column {
-    width: 100%;
-    min-width: 0;
-    display: flex;
-    flex-direction: column;
-    gap: 0;
-  }
-
-  .left-container {
-    max-width: none;
-    min-width: 0;
-    width: 100%;
   }
 }
